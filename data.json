@@ -1,8 +1,92 @@
-[{
-    "id":1,
-    "name": "Haldirams",
-    "location": "Ulhasnagar",
-    "rating": 4.3,
-    "estimateDelivery": "70 min",
-    "tags": ["North india", "South indian"]
-}]
+[
+    {
+        "id":1,
+        "name": "Haldirams",
+        "location": "Ulhasnagar",
+        "rating": 4,
+        "estimateDelivery": 70,
+        "tags": ["North india", "South indian"],
+        "imageURL": "/assets/1.jpeg"
+    },
+    {
+        "id":2,
+        "name": "Domino's Pizza",
+        "location": "Badlapur",
+        "rating": 4,
+        "estimateDelivery": 25,
+        "tags": ["Fast Food", "Snacks"],
+        "imageURL": "/assets/2.jpeg"
+    },
+    {
+        "id":3,
+        "name": "The Spicy Kitchen",
+        "location": "Bhosale Nagar",
+        "rating": 4.3,
+        "estimateDelivery": 72,
+        "tags": ["Indian", "Chinese", "Biryani"],
+        "imageURL": "/assets/3.jpeg"
+    },
+    {
+        "id":4,
+        "name": "Mummy's Kitchen",
+        "location": "Mahuli chowk",
+        "rating": 3,
+        "estimateDelivery": 30,
+        "tags": ["North india", "Desserts"],
+        "imageURL": "/assets/4.jpeg"
+    },
+    {
+        "id":5,
+        "name": "Magic cakes",
+        "location": "Station road",
+        "rating": 5,
+        "estimateDelivery": 15,
+        "tags": ["Bakery", "Desserts"],
+        "imageURL": "/assets/5.avif"
+    },
+    {
+        "id":6,
+        "name": "Mughlai",
+        "location": "Ambarnath",
+        "rating": 4,
+        "estimateDelivery": 40,
+        "tags": ["Indian", "Chinese", "Biryani"],
+        "imageURL": "/assets/6.jpeg"
+    },
+    {
+        "id":7,
+        "name": "Subway",
+        "location": "Trident tower",
+        "rating": 3,
+        "estimateDelivery": 25,
+        "tags": ["Snacks", "Desserts"],
+        "imageURL": "/assets/7.jpeg"
+    },
+    {
+        "id":8,
+        "name": "Ribbons and Ballons",
+        "location": "Badlapur",
+        "rating": 5,
+        "estimateDelivery": 50,
+        "tags": ["Cakes", "Desserts"],
+        "imageURL": "/assets/8.jpeg"
+    },
+    {
+        "id":9,
+        "name": "Kathi Junction",
+        "location": "Pranali Park",
+        "rating": 4,
+        "estimateDelivery": 30,
+        "tags": ["Indian"],
+        "imageURL": "/assets/9.jpeg"
+    },
+    {
+        "id":10,
+        "name": "Master Sandwich",
+        "location": "Badlapur",
+        "rating": 2,
+        "estimateDelivery": 20,
+        "tags": ["Italian", "Fast Food"],
+        "imageURL": "/assets/10.jpeg"
+    }
+]
