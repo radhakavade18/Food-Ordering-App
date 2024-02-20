@@ -1,55 +1,38 @@
 const API_URL = '/data.json';
 
-async function getData() {
-    const response = await fetch(API_URL).then((res) => {
-        return res.json();
-    }).catch((err) => {
-        console.log(err);
-    })
-    return response;
-}
+let hotels = fetch('/data.json').then(response => response.json());
 
 async function getHotelsData() {
-    let data = [];
-    await getData().then((res) => {
-        data = res;
-    })
-    return data;
+    let data = await hotels;
+    console.log(data);
+    getCard(data);
 }
 
-async function renderView() {
-    const data = await getHotelsData();
-    getCard(data);
-    return data;
-};
-
-renderView();
+getHotelsData();
 
 document.getElementById('sortBy').addEventListener('change', async (event) => {
+    // event.preventDefault()
     let selectedValue = event.target.value;
-    const data = await renderView();
-    if(selectedValue === 'name'){
-        data.sort((a,b) => a.name.localeCompare(b.name));
-        getCard(data);
+    const data = await hotels;
+    let res = data;
+    if (selectedValue === 'name') {
+        res.sort((a, b) => a.name.localeCompare(b.name));
+        getCard(res);
     }
 })
 
-async function searchHotel() {
-    const search = document.getElementById('searchItem').value;
-    const data = await getHotelsData();
+// async function searchHotel() {
+//     const search = document.getElementById('searchItem').value;
+//     const data = await getHotelsData();
 
-    let tags = data.filter((tag) => {
-        return tag.tags.map((i) => {
-            return i.toLowerCase().includes(search.toLowerCase());
-        });
-        // return tag.tags.map((i) => {
-        //     return i.toLowerCase() === search.toLowerCase()
-        // });
-    });
-    console.log(tags);
-}
+//     let tags = data.filter((hotel) => {
+//         return hotel.name.toLowerCase().includes(search.toLowerCase())
+//     })
 
-async function getCard(data) {
+//     console.log(tags);
+// }
+
+function getCard(data) {
     const star = '/assets/star.png';
     data.forEach(element => {
         const hotelWrapper = document.getElementById('hotelList');
